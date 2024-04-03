@@ -23,6 +23,12 @@ application {
     mainClassName = javaMainClass
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': javaMainClass
+    }
+}
+
 test {
     useJUnitPlatform()
 }
