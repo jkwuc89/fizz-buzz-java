@@ -1,0 +1,28 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+group = 'com.keithwedinger'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+ext {
+    javaMainClass = "com.keithwedinger.Main"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+test {
+    useJUnitPlatform()
+}
